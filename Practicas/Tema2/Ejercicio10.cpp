@@ -4,8 +4,9 @@ Fundamentos de Programacion
 Grado Ingenieria Informatica
 Universidad de Jaen
 
-Escriba un programa que lea de la entrada estandar los dos catetos de un
-triangulo rectangulo y escriba en la salida estandar su hipotenusa.
+
+Realice un programa que calcule el valor que toma la siguiente funcio ́n para unos
+valores dados de x e y:  sqrt(x) / (pow(y,2) - 1);
 */
 #include <iostream>
 #include <cmath>
