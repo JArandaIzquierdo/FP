@@ -1,2 +1,2 @@
-#Ignore file *.o
-*.o
+#Ignore Exec files
+Ejecutable*
