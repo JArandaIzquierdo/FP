@@ -27,7 +27,7 @@ cout<<"Introduzaca el valor de c: ";
 cin>>c;
 
 raiz1 = (-b + (sqrt(pow(b,2)-(4*a*c)))) / (2*a);
-raiz2 = (-b - (sqrt(pow(b,2)-(4*a*c))) )/ (2*a);
+raiz2 = (-b - (sqrt(pow(b,2)-(4*a*c))))/ (2*a);
 
 cout<< "La raiz 1 es: "<<raiz1<<endl;
 cout<< "La raiz 2 es: "<<raiz2<<endl;
