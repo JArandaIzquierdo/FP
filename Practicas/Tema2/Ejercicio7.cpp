@@ -4,20 +4,27 @@ Fundamentos de Programacion
 Grado Ingenieria Informatica
 Universidad de Jaen
 
-Escriba un programa que lea la nota final de cuatro alumnos y calcule la nota
-final media de los cuatro alumnos.
+Escriba un programa que lea de la entrada estandar los dos catetos de un
+triangulo rectangulo y escriba en la salida estandar su hipotenusa.
 */
 #include <iostream>
+#include <cmath>
 using namespace std;
 int main(){
 
-    double alum1, alum2, alum3, alum4, notaMedia;
+    int cateto1, cateto2, hipotenusa;
 
-    cout<<"Introduce la nota de 4 alumnos para calcular su media: "<<endl;
-    cin>>alum1>>alum2>>alum3>>alum4;
+    cout<<"Introduzca la longitud de los catetor: "<<endl;
 
-    notaMedia= (alum1 + alum2 + alum3 + alum4)/4;
+    cout<<"Cateto 1: "<<endl;
+    cin>>cateto1;
 
-    cout<<"La nota media de los alumnos es: "<<notaMedia<<endl;
+    cout<<"Cateto 2: "<<endl;
+    cin>>cateto2;
+
+    hipotenusa = sqrt(pow(cateto1,2)+pow(cateto2,2));
+
+    cout<<"La hipotenusa del trialgulo restangulo es: "<<hipotenusa<<endl;
+
 
 }

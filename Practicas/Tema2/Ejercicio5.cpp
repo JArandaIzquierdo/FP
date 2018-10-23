@@ -4,26 +4,34 @@ Fundamentos de Programacion
 Grado Ingenieria Informatica
 Universidad de Jaen
 
-Escriba un fragmento de programa que intercambie los valores de dos variables.
-Sugerencia: apoyese en una variable auxiliar.
+La calificacion final de un estudiante es la media ponderada de tres notas:
+la nota de practicas que cuenta un 30% del total, la nota teorica que
+cuenta un 60% y la nota de participacio ́n que cuenta el 10% restante.
+Escriba un programa que lea de la entrada estandar las tres notas de un
+alumno y escriba en la salida estandar su nota final.
 */
 
 #include <iostream>
 using namespace std;
 int main(){
 
-    int x,y,aux;
 
-    cout<< "Introduzca 2 numero"<<endl;
-    cin>>x>>y;
+    double notaFinal, notaPracticas, notaTeoria, notaParticipacion;
 
-    cout<<"Primer numero: "<<x<<endl;
-    cout<<"Segundo numero: "<<y<<endl;
+    cout<< "Introduzca la nota de practicas del alumno: "<< endl;
+    cin>>notaPracticas;
 
-    aux=x;
-    x=y;
-    y=aux;
+    cout<<"Introduzca la nota de teoria del alumno: "<<endl;
+    cin>>notaTeoria;
 
-    cout<<"El nuevo valor del primer numero es: "<<x<<endl;
-    cout<<"El nuevo valor del segundo numero es: "<<y<<endl;
+    cout<<"introduzca la nota de participacion del alumno: "<<endl;
+    cin>>notaParticipacion;
+
+    notaPracticas = notaPracticas * 0.3;
+    notaTeoria = notaTeoria * 0.6;
+    notaParticipacion = notaParticipacion * 0.1;
+
+    notaFinal = notaPracticas +  notaTeoria + notaParticipacion;
+
+    cout<< "La nota final del alumno es: "<< notaFinal << endl;
 }

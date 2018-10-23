@@ -5,8 +5,9 @@ Grado Ingenieria Informatica
 Universidad de Jaen
 
 
-Escriba un programa que calcule las soluciones de una ecuacion de segundo
- grado de la forma ax2 + bx + c = 0, teniendo en cuenta que:
+Suponiendo que el recibo de la luz sube un 3% cada anio, realice un programa
+que solicite una factura de este anio y una cantidad de anios y muestre en la
+salida estandar cuanto valdrıa la factura dentro del numero de anios introducidos.
 
 */
 #include <iostream>
@@ -14,23 +15,20 @@ Escriba un programa que calcule las soluciones de una ecuacion de segundo
 using namespace std;
 int main(){
 
-int a,b,c;
-double raiz1, raiz2;
+double facturaInicial, primeraFactura, facturaFinal;
+int anios;
+const double TRESPORCIENTO = 0.03;
 
-cout<<"Introduzaca el valor de a: ";
-cin>>a;
+cout<<"Introduzca el precio de la factura actual: ";
+cin>>facturaInicial;
 
-cout<<"Introduzaca el valor de b: ";
-cin>>b;
+cout<< "Introduzca el numero de anios: ";
+cin>> anios;
 
-cout<<"Introduzaca el valor de c: ";
-cin>>c;
+primeraFactura =  facturaInicial + (facturaInicial * TRESPORCIENTO);
 
-raiz1 = (-b + (sqrt(pow(b,2)-(4*a*c)))) / (2*a);
-raiz2 = (-b - (sqrt(pow(b,2)-(4*a*c))))/ (2*a);
 
-cout<< "La raiz 1 es: "<<raiz1<<endl;
-cout<< "La raiz 2 es: "<<raiz2<<endl;
-
+cout<< "La primera factura vale: "<<primeraFactura<< endl;
+cout<< "La factura despues de "<< anios << " es de: "<< facturaFinal<<endl;
 
 }
