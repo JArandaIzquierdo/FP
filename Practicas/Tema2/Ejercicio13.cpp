@@ -28,7 +28,7 @@ cin>> anios;
 primeraFactura =  facturaInicial + (facturaInicial * TRESPORCIENTO);
 
 
-cout<< "La primera factura vale: "<<primeraFactura;
+cout<< "La primera factura vale: "<<primeraFactura<< endl;
 cout<< "La factura despues de "<< anios << " es de: "<< facturaFinal<<endl;
 
 }
