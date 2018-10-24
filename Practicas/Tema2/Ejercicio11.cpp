@@ -15,20 +15,16 @@ salida estandar cuanto valdrıa la factura dentro del numero de anios introducid
 using namespace std;
 int main(){
 
-double facturaInicial, primeraFactura, facturaFinal;
+double factura;
 int anios;
 const double TRESPORCIENTO = 0.03;
 
 cout<<"Introduzca el precio de la factura actual: ";
-cin>>facturaInicial;
+cin>>factura;
 
 cout<< "Introduzca el numero de anios: ";
 cin>> anios;
 
-primeraFactura =  facturaInicial + (facturaInicial * TRESPORCIENTO);
-
-
-cout<< "La primera factura vale: "<<primeraFactura<< endl;
-cout<< "La factura despues de "<< anios << " es de: "<< facturaFinal<<endl;
+cout<< "La factura despues de "<< anios << " es de: "<< factura *(pow(1.03,anios))<<endl;
 
 }
