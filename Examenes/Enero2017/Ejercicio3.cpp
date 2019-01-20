@@ -6,18 +6,20 @@ void juntarVectores(int v1[],int tamV1, int v2[], int tamV2, int vOrdenado[], in
 
   //Creamos un nuevo vector que tendra todos los elementos de los 2 vectores
   int vectorTotal[tamV1+tamV2];
-
+  //Variable para controlar el tamaño del vector
   int tamVTotal=0;
 
+  //Metemos el primer vector en el vector total
   for(int i=0;i<tamV1;i++){
     vectorTotal[tamVTotal]=v1[i];
     tamVTotal++;
   }
+  //Metemos el segundo vector en el vector total
   for(int i=0;i<tamV2;i++){
     vectorTotal[tamVTotal]=v2[i];
     tamVTotal++;
   }
-
+  //Muestro el vector total para comprobar que esta bien (no es necesario mostrarlo)
   for(int i=0;i<tamVTotal;i++){
     cout<<vectorTotal[i]<<" ";;
   }
@@ -39,6 +41,7 @@ void juntarVectores(int v1[],int tamV1, int v2[], int tamV2, int vOrdenado[], in
         repetido=true;
 
     }
+    //Si el elemento i no esta repetido, lo añado al vector Ordenado
     if(repetido==false){
       vOrdenado[tamOrdenado]=vectorTotal[i];
       tamOrdenado++;
