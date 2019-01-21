@@ -12,35 +12,26 @@ using namespace std;
 const int TAM=8;
 
 
-void calcularVectorContiguo(int vector[], int TAM,int vectorContiguo[]){
+void calcularVectorContiguo(int vector[], int TAM){
 
-int contador=0;
-int repetido;
+  int aux=0;
+  for(int i=0;i<TAM-1;i++){
+    for(int j=i+1;j<TAM;j++){
+      if(vector[i]>=vector[j]){
+        aux=vector[i];
+        vector[i]=vector[j];
+        vector[j]=aux;
 
-  for(int i=0;i<TAM;i++){
-    repetido=-1;
-    for(int j=0;j<TAM;j++){
-      if(vector[i]==vector[j]){
-        repetido++;
       }
-    }
-    if(repetido>=1){
-        for(int j=0;j<=repetido;j++){
-          vectorContiguo[contador]=vector[i];
-          contador++;
-        }
-    }
-    else{
-      vectorContiguo[contador]=vector[i];
-      contador++;
+
     }
   }
+
 }
 
 int main(){
 
 int vector[TAM]={1,3,1,2,2,3,4,1};
-int vectorContiguo[TAM];
 
 cout<<"El vector original es: ";
 for(int i=0;i<TAM;i++){
@@ -48,11 +39,11 @@ for(int i=0;i<TAM;i++){
 }
 cout<<endl;
 
-calcularVectorContiguo(vector,TAM,vectorContiguo);
+calcularVectorContiguo(vector,TAM);
 
 cout<<"El vector contiguo es: ";
 for(int i=0;i<TAM;i++){
-  cout<<vectorContiguo[i]<<", ";
+  cout<<vector[i]<<" ";
 }
 cout<<endl;
 
